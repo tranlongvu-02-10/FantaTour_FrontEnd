@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FantaTour</title>
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<!-- Cung cấp icon miễn phí như Facebook, Insta, điện thoại,... -->
+<!-- <i class="fas fa-phone"></i> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+
+<!-- CSS Files -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+    <main class="wrapper">
+        <header class="header">
+
+            <!-- navbar -->
+            <nav class="navbar">
+                <div class="grid wide">
+                    <div class="navbar-wrap row">
+                        <!-- Logo -->
+                        <div class="col l-2 m-6 c-6">
+                            <a href="/" class="header__logo-link">
+                                <img src="./assets/img/logo.png" alt="" class="header__logo-img">
+                            </a>
+                        </div>
+
+                        <!-- navbar -->
+                        <div class="col l-8 m-0 c-0">
+                            <ul class="navbar__list ">
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Trang chủ</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Tour trong nước</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item subnav__item--hot">
+                                            <a href="#" class="subnav__item-link ">Miền Bắc</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">Miền Trung</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">Miền Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Dịch vụ du lịch</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link ">Thuê xe</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">Vé máy bay</a>
+                                        </li>
+
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">Coupon du lịch</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Về chúng tôi</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item subnav__item--new">
+                                            <a href="#" class="subnav__item-link">Đại lý</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">FantaTour</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Liên hệ</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">CSKH</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">Feedback</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="#" class="subnav__item-link">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item navbar__item--booking">
+                                    <a href="#" class="navbar__item-link">Đặt tour ngay</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Offcanvas -->
+                        <div class="col l-1 l-o-1 m-0 m-o-4 c-0">
+                            <div class="navbar__menu-wrapper">
+                                <label for="navbar__menu-input" class="navbar__menu-icon fas fa-bars"></label>
+                                <input type="checkbox" name="" id="navbar__menu-input" hidden>
+                                <div class="navbar__menu">
+                                    <div class="navbar__menu-close">
+                                        <label for="navbar__menu-input"
+                                            class="fas fa-times navbar__menu-close-icon"></label>
+                                    </div>
+                                    <div class="navbar__menu-info">
+                                        <ul class="navbar__menu-list">
+                                            <div class="navbar__menu-head">
+                                                <p>best</p>
+                                                <h3 class="navbar__menu-heading">
+                                                    <span class="yellow-underline">packages</span>
+                                                </h3>
+                                            </div>
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/HaNoi.jpeg);"
+                                                    class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="#" class="navbar__menu-item-city">Hà Nội - Yên Tử</a>
+                                                    <a href="#" class="navbar__menu-item-location">
+                                                        <i
+                                                            class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Bắc
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price"
+                                                        style="--background-color:var(--yellow-grad)">9.800.000 VND</a>
+                                                </div>
+                                            </li>
+
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/Hue.jpg);"
+                                                    class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="#" class="navbar__menu-item-city">Huế - Quảng Bình</a>
+                                                    <a href="#" class="navbar__menu-item-location">
+                                                        <i
+                                                            class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Trung
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price"
+                                                        style="--background-color:var(--red-grad)">8.000.000 VND</a>
+                                                </div>
+                                            </li>
+
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/HCMC.jpeg);"
+                                                    class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="#" class="navbar__menu-item-city">TP.Hồ Chí Minh [Jog - Sup And Spa Saigon]</a>
+                                                    <a href="#" class="navbar__menu-item-location">
+                                                        <i
+                                                            class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Nam
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price"
+                                                        style="--background-color:var(--purple-grad)">3.500.000 VND</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="package">
+                                            <div class="package-img"
+                                                style="background-image: url(./assets/img/topdanhlamthangcanh.jpg);">
+                                            </div>
+                                            <div class="package-overlay">
+                                                <div class="package-info">
+                                                    <h3 class="package-heading">Việt Nam</h3>
+                                                    <span class="package-desc">3 packages</span>
+                                                </div>
+                                            </div>
+
+                                            <a href="#" class="mobile-package__link"></a>
+                                            <div class="package-cover hide-on-mobile-tablet">
+
+                                                <h4 class="package-cover-head">Gói ưu đãi</h4>
+                                                <ul class="package-list">
+                                                    <li class="package-item">
+                                                        <a href="#" class="package-link">Hạ Long</a>
+                                                    </li>
+                                                    <li class="package-item">
+                                                        <a href="#" class="package-link">Tây Nguyên</a>
+                                                    </li>
+                                                    <li class="package-item">
+                                                        <a href="#" class="package-link">Phú Quốc</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="package-btn">
+                                                    <a href="#" class="package-btn-link">Xem điểm đến</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col l-0 m-2 m-o-4 c-o-4">
+                            <div class="mobile-menu__wrapper">
+                                <input hidden type="checkbox" name="" id="mobile-menu__input">
+                                <label for="mobile-menu__input" class="mobile-menu__overlay"></label>
+                                <label for="mobile-menu__input" class="mobile-menu__icon fas fa-bars"></label>
+                                <div class="mobile-menu">
+                                    <label for="mobile-menu__input" class="fas fa-times mobile-menu__close"></label>
+                                    <ul class="mobile-menu__list">
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">HOME</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">packages</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">shop</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">about us</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">pages</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">news</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">contact</a>
+                                        </li>
+                                        <li class="mobile-menu__item">
+                                            <a href="#" class="mobile-menu__item-link">book now</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Banner -->
+            <div class="search" style="background-image: url(./assets/img/PuLuong.png);">
+                <div class="search__wrap">
+                    <div class="search__head">
+                        <h2>Search your next holiday</h2>
+                        <span>Xem khuyến mãi FantaTour</span>
+                    </div>
+                    <form action="" class="search__form">
+                        <select name="" id="" class="search__selection">
+                            <option value="" class="search__option">Chọn chuyến đi của bạn...</option>
+                            <option value="" class="search__option">europe</option>
+                            <option value="" class="search__option">&nbsp; - italy</option>
+                            <option value="" class="search__option">&nbsp; - netherlands</option>
+                            <option value="" class="search__option">asia</option>
+                            <option value="" class="search__option">&nbsp; - thailand</option>
+                            <option value="" class="search__option">United states</option>
+                            <option value="" class="search__option">oceania</option>
+                        </select>
+                        <input type="submit" value="" id="search__form-submit" hidden>
+                        <label for="search__form-submit" class="fas fa-search search__form-submit-icon"></label>
+                    </form>
+
+                    <div class="search__aside">
+                        <div class="grid">
+                            <div class="row">
+                                <div class="col l-3 m-6 c-12">
+                                    <a href="#" class="search__aside-item">
+                                        <img src="./assets/img/relax__icon.png" alt="relax" class="search__aside-img">
+                                        <span class="search__aside-link">Nghỉ dưỡng</span>
+                                    </a>
+                                </div>
+                                <div class="col l-3 m-6 c-12">
+                                    <a href="#" class="search__aside-item">
+                                        <img src="./assets/img/cultural__icon.png" alt="relax"
+                                            class="search__aside-img">
+                                        <span class="search__aside-link">Văn hóa</span>
+                                    </a>
+                                </div>
+                                <div class="col l-3 m-6 c-12">
+                                    <a href="#" class="search__aside-item">
+                                        <img src="./assets/img/sport__icon.png" alt="relax" class="search__aside-img">
+                                        <span class="search__aside-link">Thể thao</span>
+                                    </a>
+                                </div>
+                                <div class="col l-3 m-6 c-12">
+                                    <a href="#" class="search__aside-item">
+                                        <img src="./assets/img/history__icon.png" alt="relax" class="search__aside-img">
+                                        <span class="search__aside-link">Lịch sử</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Company Name</h3>
+                <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+                <p>Email: tranlongvu02102004@gmail.com</p>
+                <p>Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Kết nối với chúng tôi</h3>
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html> 
