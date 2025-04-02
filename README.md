@@ -7,7 +7,8 @@ FantaTour_FrontEnd là giao diện người dùng của hệ thống đặt tour
 | Mã Thành Viên | Họ Tên |
 |--------------|---------|
 | 2280603758       | Trần Long Vũ | 
-| TV002       | Lê Đại Thanh Long | 
+| 2280601752       | Lê Đại Thanh Long | 
+| 2280607474       | Nguyễn Khắc Minh Hiếu |
 
 
 
