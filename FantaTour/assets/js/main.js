@@ -63,6 +63,3 @@ function navigateToPage() {
   }
 }
 
-
-//Hiệu ứng đánh chữ
-
