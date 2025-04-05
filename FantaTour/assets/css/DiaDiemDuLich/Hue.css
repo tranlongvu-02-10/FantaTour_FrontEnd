@@ -1,0 +1,21 @@
+
+    .navbar__list {
+        display: flex;
+        list-style: none;
+    }
+    .navbar__item {
+        margin: 0 15px;
+    }
+    .navbar__item-link {
+        text-decoration: none;
+        color: #333;
+    }
+    .navbar__subnav {
+        display: none;
+        position: absolute;
+        list-style: none;
+        background: #fff;
+    }
+    .navbar__item:hover .navbar__subnav {
+        display: block;
+    }

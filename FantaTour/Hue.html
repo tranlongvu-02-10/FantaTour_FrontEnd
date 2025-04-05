@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Du Lich - Hawaii</title>
+    <link rel="shortcut icon" href="./assets/img/logo-demo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/DiaDiemDuLich/Hawaii.css">
+
+    <!-- Inline CSS -->
+    <style>
+        /* Banner */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            background-image: url('./assets/img/Hawaii.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .banner-content h1 span {
+            color: #00b7eb;
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Filters */
+        .filters {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .filters .grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .filter-group select,
+        .filter-group input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .filter-group select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+            background-size: 12px;
+            padding-right: 30px;
+        }
+
+        .filter-group input[type="text"] {
+            width: 200px;
+        }
+
+        .filter-group .search-btn {
+            padding: 8px 20px;
+            background: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .filter-group .search-btn:hover {
+            background: #218838;
+        }
+
+        /* Experiences Section */
+        .experiences {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .experiences h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .experiences p {
+            font-size: 1.2rem;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .experience-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .experience-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .experience-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Tours Section */
+        .tours {
+            padding: 50px 0;
+            text-align: center;
+            background-image: url('./assets/img/tours-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: #fff;
+        }
+
+        .tours::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .tours .grid {
+            position: relative;
+            z-index: 2;
+        }
+
+        .tours h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .tours p {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .tour-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .tour-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+            position: relative;
+        }
+
+        .tour-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tour-item .discount {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #28a745;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .tour-item .content {
+            padding: 15px;
+        }
+
+        .tour-item h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .tour-item .price {
+            font-size: 1.1rem;
+            color: #e74c3c;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .tour-item .price .old-price {
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+
+        .tour-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0;
+            text-transform: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .banner {
+                height: 400px;
+            }
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+            .banner-content p {
+                font-size: 1rem;
+            }
+            .filters .grid {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .filter-group {
+                flex-direction: column;
+                width: 100%;
+            }
+            .filter-group select,
+            .filter-group input[type="text"] {
+                width: 100%;
+            }
+            .experience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tour-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+            .tour-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+        <header class="header">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="grid wide">
+                    <div class="navbar-wrap row">
+                        <!-- Logo -->
+                        <div class="col l-2 m-6 c-6">
+                            <a href="index.html" class="header__logo-link">
+                                <img src="./assets/img/logo.png" alt="Logo" class="header__logo-img">
+                            </a>
+                        </div>
+
+                        <!-- Navbar -->
+                        <div class="col l-8 m-0 c-0">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <a href="index.html" class="navbar__item-link">Trang chủ</a>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Tour trong nước</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item subnav__item--hot">
+                                            <a href="MienBac.html" class="subnav__item-link">Miền Bắc</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="MienTrung.html" class="subnav__item-link">Miền Trung</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="MienNam.html" class="subnav__item-link">Miền Nam</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Dịch vụ du lịch</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item">
+                                            <a href="ThueXe.html" class="subnav__item-link">Thuê xe</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="VeMayBay.html" class="subnav__item-link">Vé máy bay</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="404error.html" class="subnav__item-link">Coupon du lịch</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Về chúng tôi</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item subnav__item--new">
+                                            <a href="404error.html" class="subnav__item-link">Đại lý</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="FantaTour.html" class="subnav__item-link">FantaTour</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item">
+                                    <a href="#" class="navbar__item-link">Liên hệ</a>
+                                    <ul class="navbar__subnav">
+                                        <li class="subnav__item">
+                                            <a href="cskh.html" class="subnav__item-link">CSKH</a>
+                                        </li>
+                                        <li class="subnav__item">
+                                            <a href="feedback.html" class="subnav__item-link">Feedback</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navbar__item navbar__item--booking">
+                                    <a href="DatTour.html" class="navbar__item-link">Đặt tour ngay</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Offcanvas -->
+                        <div class="col l-1 l-o-1 m-0 m-o-4 c-0">
+                            <div class="navbar__menu-wrapper">
+                                <label for="navbar__menu-input" class="navbar__menu-icon fas fa-bars"></label>
+                                <input type="checkbox" name="" id="navbar__menu-input" hidden>
+                                <div class="navbar__menu">
+                                    <div class="navbar__menu-close">
+                                        <label for="navbar__menu-input" class="fas fa-times navbar__menu-close-icon"></label>
+                                    </div>
+                                    <div class="navbar__menu-info">
+                                        <ul class="navbar__menu-list">
+                                            <div class="navbar__menu-head">
+                                                <h3 class="navbar__menu-heading">
+                                                    <span>Các gói ưu đãi</span>
+                                                </h3>
+                                            </div>
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/HaNoi.jpeg);" class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="HN-YT.html" class="navbar__menu-item-city">Hà Nội - Yên Tử</a>
+                                                    <a href="MienBac.html" class="navbar__menu-item-location">
+                                                        <i class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Bắc
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price" style="--background-color:var(--yellow-grad)">9.800.000 VND</a>
+                                                </div>
+                                            </li>
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/Hue.jpg);" class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="H-QB.html" class="navbar__menu-item-city">Huế - Quảng Bình</a>
+                                                    <a href="MienTrung.html" class="navbar__menu-item-location">
+                                                        <i class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Trung
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price" style="--background-color:var(--red-grad)">8.000.000 VND</a>
+                                                </div>
+                                            </li>
+                                            <li class="navbar__menu-item">
+                                                <div style="background-image: url(./assets/img/HCMC.jpeg);" class="navbar__menu-item-img"></div>
+                                                <div class="navbar__menu-item-info">
+                                                    <a href="HCM.html" class="navbar__menu-item-city">TP.Hồ Chí Minh [Jog - Sup And Spa Saigon]</a>
+                                                    <a href="MienNam.html" class="navbar__menu-item-location">
+                                                        <i class="navbar__menu-item-location-icon fas fa-map-marker-alt"></i>
+                                                        Miền Nam
+                                                    </a>
+                                                    <a href="#" class="navbar__menu-item-price" style="--background-color:var(--purple-grad)">3.500.000 VND</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="package">
+                                            <div class="package-img" style="background-image: url(./assets/img/topdanhlamthangcanh.jpg);"></div>
+                                            <div class="package-overlay">
+                                                <div class="package-info">
+                                                    <h3 class="package-heading">Việt Nam</h3>
+                                                    <span class="package-desc">3 gói ưu đãi</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Banner -->
+        <section class="banner">
+            <div class="banner-content">
+                <h1>Hòa mình vào thiên nhiên đảo <span>HAWAII</span></h1>
+                <p>Giảm giá 30% cho khách hàng đăng ký trong tháng 11/2019</p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <div class="grid wide">
+                <div class="filter-group">
+                    <select name="category">
+                        <option value="">Danh mục</option>
+                        <option value="tour">Tour</option>
+                        <option value="hotel">Khách sạn</option>
+                        <option value="flight">Chuyến bay</option>
+                    </select>
+                    <select name="type">
+                        <option value="">Loại giới thiệu</option>
+                        <option value="popular">Phổ biến</option>
+                        <option value="new">Mới nhất</option>
+                    </select>
+                    <select name="price">
+                        <option value="">Price</option>
+                        <option value="low-to-high">Thấp đến cao</option>
+                        <option value="high-to-low">Cao đến thấp</option>
+                    </select>
+                    <select name="discount">
+                        <option value="">Giảm giá</option>
+                        <option value="10">10%</option>
+                        <option value="20">20%</option>
+                        <option value="30">30%</option>
+                    </select>
+                    <input type="text" placeholder="TÌM KIẾM">
+                    <button class="search-btn">TÌM KIẾM</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nội dung chính -->
+        <section class="content">
+            <div class="grid wide">
+                <h2>Khám phá Hawaii</h2>
+                <p>Chào mừng bạn đến với trang du lịch Hawaii. Khám phá vẻ đẹp thiên nhiên tuyệt vời với các tour lặn biển, bãi biển cát trắng và nhiều hoạt động thú vị!</p>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section class="experiences">
+            <div class="grid wide">
+                <h2>Trải nghiệm trên đảo Hawaii</h2>
+                <p>KHÁM PHÁ VÙNG ĐẤT MỚI XINH ĐẸP</p>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <img src="./assets/img/dainoihue.webp" alt="Tắm nắng bãi biển">
+                        <div class="overlay">Đại nội huế</div>
+                    </div>
+                    <div class="experience-item">
+                        <img src="./assets/img/chuathienmu.webp" alt="chùa thiên mụ">
+                        <div class="overlay">Chùa thiên mụ</div>
+                    </div>
+                    <div class="experience-item">
+                        <img src="./assets/img/phodibohue.jpg" alt="Phố đi bộ">
+                        <div class="overlay">Phố đi bộ</div>
+                    </div>
+                    <div class="experience-item">
+                        <img src="./assets/img/hawaii-diving.jpg" alt="Lặn đại dương">
+                        <div class="overlay">Lặn đại dương</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tours Section -->
+        <section class="tours">
+            <div class="grid wide">
+                <h2>Tour tham quan trọn gói</h2>
+                <p>ĐÓN GIÃN HÓA LỊCH TRÌNH KHÁM PHÁ</p>
+                <div class="tour-grid">
+                    <div class="tour-item">
+                        <img src="./assets/img/tour-1.jpg" alt="Thưởng thức dừa đảo Hawaii">
+                        <div class="content">
+                            <h3>Thưởng thức dừa đảo Hawaii</h3>
+                            <div class="price">1.500.000 đ</div>
+                            <p>Thiên đường tình yêu là mỹ từ xứng tung Hawaii quà</p>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <div class="discount">Giảm giá!</div>
+                        <img src="./assets/img/tour-2.jpg" alt="Lãng mạn săn hồ">
+                        <div class="content">
+                            <h3>Lãng mạn săn hồ</h3>
+                            <div class="price">4.500.000 đ <span class="old-price">4.000.000 đ</span></div>
+                            <p>Thiên đường tình yêu là mỹ từ xứng tung Hawaii quà</p>
+                        </div>
+                    </div>
+                    <div class="tour-item">
+                        <img src="./assets/img/tour-3.jpg" alt="Lướt sóng mạo hiểm">
+                        <div class="content">
+                            <h3>Lướt sóng mạo hiểm</h3>
+                            <div class="price">5.000.000 đ</div>
+                            <p>Thiên đường tình yêu là mỹ từ xứng tung Hawaii quà</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS Files -->
+    <script src="./assets/js/countdown.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
